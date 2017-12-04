@@ -1,0 +1,20 @@
+<!--
+  ~ Created by Mohamed Ibrahim N
+  ~ Created on : 17/11/17 6:06 PM
+  ~ File name : side_nav_bar.xml
+  ~ Last modified by : Mohamed Ibrahim N
+  ~ Last modified on : 17/11/17 6:06 PM
+  ~ Project : MusicApp
+  ~ Organization : FreeLancer trinhvanbien
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:angle="135"
+        android:centerColor="#5667ac"
+        android:endColor="#2e3e7d"
+        android:startColor="#6a7cc7"
+        android:type="linear" />
+</shape>

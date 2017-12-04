@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Mohamed Ibrahim N
+  ~ Created on : 30/11/17 2:52 AM
+  ~ File name : searchable.xml
+  ~ Last modified by : Mohamed Ibrahim N
+  ~ Last modified on : 30/11/17 2:52 AM
+  ~ Project : MusicApp
+  ~ Organization : FreeLancer trinhvanbien
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<searchable xmlns:android="http://schemas.android.com/apk/res/android"
+    android:hint="@string/search_music"
+    android:label="@string/app_name"
+    android:searchSuggestAuthority="in.tr.musicapp.utility.SuggestionProvider"
+    android:searchSuggestIntentAction="android.intent.action.VIEW"
+    android:searchSuggestSelection=" ?" />

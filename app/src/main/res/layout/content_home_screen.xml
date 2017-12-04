@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Mohamed Ibrahim N
+  ~ Created on : 17/11/17 6:06 PM
+  ~ File name : content_home_screen.xml
+  ~ Last modified by : Mohamed Ibrahim N
+  ~ Last modified on : 17/11/17 6:06 PM
+  ~ Project : MusicApp
+  ~ Organization : FreeLancer trinhvanbien
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="in.tr.musicapp.activity.HomeScreenActivity"
+    tools:showIn="@layout/app_bar_home_screen">
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+        android:id="@+id/audio_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:auto_show="true"
+        app:controller_layout_id="@layout/exo_playback_control_view"
+        app:hide_on_touch="false"
+        app:show_timeout="0" />
+
+</RelativeLayout>
+

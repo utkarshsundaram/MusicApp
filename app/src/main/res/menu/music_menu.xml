@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Mohamed Ibrahim N
+  ~ Created on : 17/11/17 11:23 PM
+  ~ File name : music_menu.xml
+  ~ Last modified by : Mohamed Ibrahim N
+  ~ Last modified on : 17/11/17 11:23 PM
+  ~ Project : MusicApp
+  ~ Organization : FreeLancer trinhvanbien
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/play"
+        android:orderInCategory="102"
+        android:title="@string/play" />
+    <item
+        android:id="@+id/add_to_queue"
+        android:orderInCategory="102"
+        android:title="@string/add_to_playing_queue" />
+    <item
+        android:id="@+id/add_to_favorite"
+        android:orderInCategory="102"
+        android:title="@string/add_to_favorite" />
+    <item
+        android:id="@+id/delete"
+        android:orderInCategory="102"
+        android:title="@string/delete" />
+    <item
+        android:id="@+id/share_file"
+        android:orderInCategory="102"
+        android:title="@string/share_file" />
+</menu>

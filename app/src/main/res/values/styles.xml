@@ -1,0 +1,77 @@
+<!--
+  ~ Created by Mohamed Ibrahim N
+  ~ Created on : 17/11/17 5:12 PM
+  ~ File name : styles.xml
+  ~ Last modified by : Mohamed Ibrahim N
+  ~ Last modified on : 17/11/17 5:08 PM
+  ~ Project : MusicApp
+  ~ Organization : FreeLancer trinhvanbien
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base app theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customization of app theme. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionMenuTextColor">@android:color/white</item>
+        <item name="android:actionModeBackground" tools:targetApi="honeycomb">@color/colorAccent
+        </item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.Fullscreen">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--Colored Raised button material Design -->
+    <style name="AppTheme.Raised">
+        <item name="buttonStyle">@style/Widget.AppCompat.Button.Colored</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="AppTheme.Raised.Accent">
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.Raised.Primary">
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <!--Colored Flat button material Design -->
+    <style name="AppTheme.Flat">
+        <item name="buttonStyle">@style/Widget.AppCompat.Button.Borderless.Colored</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="AppTheme.Flat.Accent">
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.Flat.Primary">
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+</resources>

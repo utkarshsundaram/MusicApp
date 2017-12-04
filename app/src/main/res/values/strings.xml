@@ -1,0 +1,131 @@
+<!--
+  ~ Created by Mohamed Ibrahim N
+  ~ Created on : 17/11/17 5:12 PM
+  ~ File name : strings.xml
+  ~ Last modified by : Mohamed Ibrahim N
+  ~ Last modified on : 17/11/17 4:38 PM
+  ~ Project : MusicApp
+  ~ Organization : FreeLancer trinhvanbien
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<resources>
+    <string name="app_name">Music App</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="downloaded_files">Downloaded Files</string>
+    <string name="favorites">Favorites</string>
+    <string name="action_settings">Settings</string>
+    <string name="share_app">Share App</string>
+    <string name="rate_app">Rate App</string>
+    <string name="exit">Exit</string>
+
+    <string name="share_app_content">I found Music App wonderful for listening and downloading my favorite music.
+        Please give it a try at https://goo.gl/musicapp</string>
+    <string name="share_app_title">Share Music App</string>
+
+    <string name="cancel">Cancel</string>
+    <string name="exit_app">Exit Music App</string>
+    <string name="exit_message">Are you sure you want to exit?</string>
+
+    <string name="music_name">The Thrill Of It All</string>
+    <string name="music_artist">Sam Smith</string>
+    <string name="music_duration">Duration : 5:30 seconds</string>
+    <string name="play">Play</string>
+    <string name="add_to_playing_queue">Add to Playing Queue</string>
+    <string name="add_to_favorite">Add to Favorite</string>
+    <string name="delete">Delete</string>
+    <string name="share_file">Share File</string>
+
+    <string name="retry">Retry</string>
+    <string name="search">Search</string>
+    <string name="search_music">Search Music</string>
+    <string name="download">Download</string>
+    <string name="start_time">00:00</string>
+    <string name="headset">Headset</string>
+    <string name="filter">Filter</string>
+    <string name="filter_a_z">Filter A - Z</string>
+    <string name="download_date">Download Date</string>
+    <string name="file_size">File Size</string>
+    <string name="delete_message">Are you sure you want to delete?</string>
+    <string name="remove_favorite">Remove from Favorite</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="auto_play">Auto Play</string>
+    <string name="receive_notification">Receive Notification</string>
+    <string name="download_folder">Download Folder</string>
+    <string name="fb_banner_id">785924291578572_785929924911342</string>
+    <string name="fb_fullscreen_ad">785924291578572_785925874911747</string>
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Mohamed Ibrahim N
+  ~ Created on : 18/11/17 3:28 AM
+  ~ File name : downloads_menu.xml
+  ~ Last modified by : Mohamed Ibrahim N
+  ~ Last modified on : 18/11/17 3:28 AM
+  ~ Project : MusicApp
+  ~ Organization : FreeLancer trinhvanbien
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="in.tr.musicapp.activity.HomeScreenActivity">
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search"
+        android:title="@string/search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="ifRoom" />
+
+
+    <item
+        android:id="@+id/action_filter"
+        android:icon="@drawable/ic_filter"
+        android:title="@string/filter"
+        app:showAsAction="ifRoom">
+
+        <menu>
+            <item
+                android:id="@+id/filter_az"
+                android:orderInCategory="100"
+                android:title="@string/filter_a_z" />
+
+            <item
+                android:id="@+id/filter_date"
+                android:orderInCategory="100"
+                android:title="@string/download_date" />
+
+            <item
+                android:id="@+id/filter_size"
+                android:orderInCategory="100"
+                android:title="@string/file_size" />
+
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Mohamed Ibrahim N
+  ~ Created on : 17/11/17 6:06 PM
+  ~ File name : activity_home_screen_drawer.xml
+  ~ Last modified by : Mohamed Ibrahim N
+  ~ Last modified on : 17/11/17 6:06 PM
+  ~ Project : MusicApp
+  ~ Organization : FreeLancer trinhvanbien
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_downloaded"
+        android:icon="@drawable/ic_menu_downloaded"
+        android:title="@string/downloaded_files" />
+    <item
+        android:id="@+id/nav_favorites"
+        android:icon="@drawable/ic_menu_favorite"
+        android:title="@string/favorites" />
+
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/ic_menu_settings"
+        android:title="@string/action_settings" />
+    <item
+        android:id="@+id/nav_share"
+        android:icon="@drawable/ic_menu_share"
+        android:title="@string/share_app" />
+    <item
+        android:id="@+id/nav_rate"
+        android:icon="@drawable/ic_menu_rate"
+        android:title="@string/rate_app" />
+    <item
+        android:id="@+id/nav_exit"
+        android:icon="@drawable/ic_menu_exit"
+        android:title="@string/exit" />
+</menu>

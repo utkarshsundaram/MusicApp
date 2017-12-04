@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Mohamed Ibrahim N
+  ~ Created on : 25/11/17 4:06 PM
+  ~ File name : dialog_fullscreen_player.xml
+  ~ Last modified by : Mohamed Ibrahim N
+  ~ Last modified on : 25/11/17 4:06 PM
+  ~ Project : MusicApp
+  ~ Organization : FreeLancer trinhvanbien
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/dialog_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/music_logo"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:adjustViewBounds="true"
+            android:padding="6dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_music_thumbnail" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/exo_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@color/text_color"
+            android:textSize="16sp" />
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="120dp" />
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+        android:id="@+id/fullscreen_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:auto_show="true"
+        app:controller_layout_id="@layout/exo_playback_control_fullscreen"
+        app:hide_on_touch="false"
+        app:show_timeout="0" />
+
+</RelativeLayout>

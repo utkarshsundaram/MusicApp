@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Mohamed Ibrahim N
+  ~ Created on : 15/11/17 3:56 PM
+  ~ File name : vertical_separator.xml
+  ~ Last modified by : Mohamed Ibrahim N
+  ~ Last modified on : 15/11/17 3:56 PM
+  ~ Project : GHMatrimony
+  ~ Organization : TeamRocket Business Services
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<View xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0.20dp"
+    android:layout_height="match_parent"
+    android:background="@color/inactive_space" />
