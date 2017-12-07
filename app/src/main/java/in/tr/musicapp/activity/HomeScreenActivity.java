@@ -1,9 +1,9 @@
 /*
  * Created by Mohamed Ibrahim N
- * Created on : 17/11/17 6:06 PM
+ * Created on : 7/12/17 3:08 PM
  * File name : HomeScreenActivity.java
  * Last modified by : Mohamed Ibrahim N
- * Last modified on : 17/11/17 6:06 PM
+ * Last modified on : 6/12/17 9:16 PM
  * Project : MusicApp
  * Organization : FreeLancer trinhvanbien
  * Copyright (c) 2017. All rights reserved.
@@ -384,6 +384,8 @@ public class HomeScreenActivity extends AppCompatActivity
         playlist = new HashMap<>();
         addMediaSource(music);
         exoPlayer.prepare(uriMediaSource);
+        //enabled auto play in downloaded files
+        exoPlayer.setPlayWhenReady(true);
         LinearLayout play_control = simpleExoPlayerView.findViewById(R.id.fullScreen);
         play_control.setOnClickListener(new View.OnClickListener() {
             @Override

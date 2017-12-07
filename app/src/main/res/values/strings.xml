@@ -1,9 +1,9 @@
 <!--
   ~ Created by Mohamed Ibrahim N
-  ~ Created on : 17/11/17 5:12 PM
+  ~ Created on : 7/12/17 3:08 PM
   ~ File name : strings.xml
   ~ Last modified by : Mohamed Ibrahim N
-  ~ Last modified on : 17/11/17 4:38 PM
+  ~ Last modified on : 6/12/17 9:14 PM
   ~ Project : MusicApp
   ~ Organization : FreeLancer trinhvanbien
   ~ Copyright (c) 2017. All rights reserved.
@@ -81,34 +81,6 @@
     <string name="pref_header_data_sync">Data &amp; sync</string>
 
     <string name="pref_title_sync_frequency">Sync frequency</string>
-    <string-array name="pref_sync_frequency_titles">
-        <item>15 minutes</item>
-        <item>30 minutes</item>
-        <item>1 hour</item>
-        <item>3 hours</item>
-        <item>6 hours</item>
-        <item>Never</item>
-    </string-array>
-    <string-array name="pref_sync_frequency_values">
-        <item>15</item>
-        <item>30</item>
-        <item>60</item>
-        <item>180</item>
-        <item>360</item>
-        <item>-1</item>
-    </string-array>
-
-    <string-array name="list_preference_entries">
-        <item>Entry 1</item>
-        <item>Entry 2</item>
-        <item>Entry 3</item>
-    </string-array>
-
-    <string-array name="list_preference_entry_values">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-    </string-array>
 
     <string-array name="multi_select_list_preference_default_value" />
 
