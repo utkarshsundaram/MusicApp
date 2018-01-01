@@ -1,9 +1,9 @@
 /*
  * Created by Mohamed Ibrahim N
- * Created on : 1/1/18 7:44 PM
+ * Created on : 1/1/18 7:53 PM
  * File name : DownloadedItemAdapter.java
  * Last modified by : Mohamed Ibrahim N
- * Last modified on : 27/12/17 8:49 PM
+ * Last modified on : 1/1/18 7:49 PM
  * Project : MusicApp
  * Organization : FreeLancer trinhvanbien
  * Copyright (c) 2018. All rights reserved.
@@ -196,7 +196,7 @@ public class DownloadedItemAdapter extends ArrayAdapter<Music> {
 
     private void openFolder(Uri uri) {
         Intent openFolder = new Intent(Intent.ACTION_GET_CONTENT);
-        openFolder.setDataAndType(uri, "resource/folder");
+        openFolder.setDataAndType(uri, "*/*");
         getContext().startActivity(Intent.createChooser(openFolder, "Open folder"));
     }
 
