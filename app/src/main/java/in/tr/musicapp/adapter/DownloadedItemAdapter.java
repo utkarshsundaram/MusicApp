@@ -1,12 +1,12 @@
 /*
  * Created by Mohamed Ibrahim N
- * Created on : 17/11/17 9:48 PM
+ * Created on : 1/1/18 7:44 PM
  * File name : DownloadedItemAdapter.java
  * Last modified by : Mohamed Ibrahim N
- * Last modified on : 12/7/17 3:04 PM
+ * Last modified on : 27/12/17 8:49 PM
  * Project : MusicApp
  * Organization : FreeLancer trinhvanbien
- * Copyright (c) 2017. All rights reserved.
+ * Copyright (c) 2018. All rights reserved.
  */
 
 package in.tr.musicapp.adapter;
@@ -159,6 +159,9 @@ public class DownloadedItemAdapter extends ArrayAdapter<Music> {
                                     }
                                 }
                                 break;
+                            case R.id.open_folder:
+                                openFolder(uri);
+                                break;
                             case R.id.delete:
                                 //delete the file
                                 deleteFile(uri, name, position);
@@ -189,6 +192,12 @@ public class DownloadedItemAdapter extends ArrayAdapter<Music> {
         if (onNavigationListener != null) {
             onNavigationListener.onAddedPlaylist(music);
         }
+    }
+
+    private void openFolder(Uri uri) {
+        Intent openFolder = new Intent(Intent.ACTION_GET_CONTENT);
+        openFolder.setDataAndType(uri, "resource/folder");
+        getContext().startActivity(Intent.createChooser(openFolder, "Open folder"));
     }
 
     private void deleteFile(final Uri uri, final String name, final int position) {

@@ -1,12 +1,12 @@
 <!--
   ~ Created by Mohamed Ibrahim N
-  ~ Created on : 7/12/17 3:08 PM
+  ~ Created on : 1/1/18 7:44 PM
   ~ File name : strings.xml
   ~ Last modified by : Mohamed Ibrahim N
-  ~ Last modified on : 6/12/17 9:14 PM
+  ~ Last modified on : 27/12/17 8:41 PM
   ~ Project : MusicApp
   ~ Organization : FreeLancer trinhvanbien
-  ~ Copyright (c) 2017. All rights reserved.
+  ~ Copyright (c) 2018. All rights reserved.
   -->
 
 <resources>
@@ -100,4 +100,5 @@
     <string name="download_folder">Download Folder</string>
     <string name="fb_banner_id">785924291578572_785929924911342</string>
     <string name="fb_fullscreen_ad">785924291578572_785925874911747</string>
+    <string name="open_file_in_folder">Open File in Folder</string>
 </resources>
