@@ -1,9 +1,9 @@
 /*
  * Created by Mohamed Ibrahim N
- * Created on : 1/1/18 7:53 PM
+ * Created on : 5/2/18 5:51 PM
  * File name : DownloadedItemAdapter.java
  * Last modified by : Mohamed Ibrahim N
- * Last modified on : 1/1/18 7:49 PM
+ * Last modified on : 5/2/18 3:06 PM
  * Project : MusicApp
  * Organization : FreeLancer trinhvanbien
  * Copyright (c) 2018. All rights reserved.
@@ -17,6 +17,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.content.FileProvider;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.AppCompatTextView;
@@ -36,6 +37,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+import in.tr.musicapp.BuildConfig;
 import in.tr.musicapp.R;
 import in.tr.musicapp.database.DBHandler;
 import in.tr.musicapp.interfaces.OnNavigationListener;
@@ -195,9 +197,15 @@ public class DownloadedItemAdapter extends ArrayAdapter<Music> {
     }
 
     private void openFolder(Uri uri) {
-        Intent openFolder = new Intent(Intent.ACTION_GET_CONTENT);
-        openFolder.setDataAndType(uri, "*/*");
-        getContext().startActivity(Intent.createChooser(openFolder, "Open folder"));
+        File file = new File(uri.getPath());
+        Uri fileUri = Uri.parse(file.getParentFile().getPath());
+        Intent openFolder = new Intent(Intent.ACTION_VIEW);
+        openFolder.setDataAndType(fileUri, "resource/folder");
+        if (openFolder.resolveActivityInfo(getContext().getPackageManager(), 0) != null) {
+            getContext().startActivity(openFolder);
+        } else {
+            Toast.makeText(getContext(), "File explorer not found. Can't open.", Toast.LENGTH_LONG).show();
+        }
     }
 
     private void deleteFile(final Uri uri, final String name, final int position) {

@@ -1,12 +1,12 @@
 /*
  * Created by Mohamed Ibrahim N
- * Created on : 17/11/17 5:12 PM
+ * Created on : 5/2/18 5:51 PM
  * File name : build.gradle
  * Last modified by : Mohamed Ibrahim N
- * Last modified on : 17/11/17 4:53 PM
+ * Last modified on : 5/2/18 5:27 PM
  * Project : MusicApp
  * Organization : FreeLancer trinhvanbien
- * Copyright (c) 2017. All rights reserved.
+ * Copyright (c) 2018. All rights reserved.
  */
 
 apply plugin: 'com.android.application'
@@ -16,12 +16,13 @@ android {
     buildToolsVersion "26.0.2"
     defaultConfig {
         applicationId "in.tr.musicapp"
-        minSdkVersion 15
+        minSdkVersion 17
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
+        useLibrary 'org.apache.http.legacy'
     }
     buildTypes {
         release {
@@ -50,6 +51,9 @@ dependencies {
     compile 'yogesh.firzen:FilesLister:1.0.1.g'
     compile 'yogesh.firzen:MukkiyaSevaigal:1.0.6'
     compile 'com.facebook.android:audience-network-sdk:4.+'
+    compile 'com.appnext.sdk:ads:2.+'
+    compile 'com.google.android.gms:play-services-basement:11.0.0'
+    compile 'com.google.android.gms:play-services-location:11.0.0'
     testCompile 'junit:junit:4.12'
 }
 

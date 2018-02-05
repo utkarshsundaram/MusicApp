@@ -1,12 +1,12 @@
 /*
  * Created by Mohamed Ibrahim N
- * Created on : 19/11/17 2:47 AM
+ * Created on : 5/2/18 5:51 PM
  * File name : DownloadFile.java
  * Last modified by : Mohamed Ibrahim N
- * Last modified on : 19/11/17 2:47 AM
+ * Last modified on : 5/2/18 3:52 PM
  * Project : MusicApp
  * Organization : FreeLancer trinhvanbien
- * Copyright (c) 2017. All rights reserved.
+ * Copyright (c) 2018. All rights reserved.
  */
 
 package in.tr.musicapp.utility;
@@ -34,7 +34,7 @@ public class DownloadFile {
         DownloadManager.Request request = new DownloadManager.Request(uri);
         request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI | DownloadManager.Request.NETWORK_MOBILE);
         request.setAllowedOverRoaming(true);
-        request.setTitle("Downloading " + fileName);
+        request.setTitle(fileName);
         request.setDescription("Music App");
         request.setVisibleInDownloadsUi(true);
         request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);

@@ -1,12 +1,12 @@
 /*
  * Created by Mohamed Ibrahim N
- * Created on : 7/12/17 3:08 PM
+ * Created on : 5/2/18 5:51 PM
  * File name : HomeScreenActivity.java
  * Last modified by : Mohamed Ibrahim N
- * Last modified on : 6/12/17 9:16 PM
+ * Last modified on : 5/2/18 5:37 PM
  * Project : MusicApp
  * Organization : FreeLancer trinhvanbien
- * Copyright (c) 2017. All rights reserved.
+ * Copyright (c) 2018. All rights reserved.
  */
 
 package in.tr.musicapp.activity;
@@ -17,6 +17,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -29,6 +30,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
@@ -37,6 +39,14 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.appnext.ads.AdsError;
+import com.appnext.ads.interstitial.Interstitial;
+import com.appnext.core.callbacks.OnAdLoaded;
+import com.appnext.core.callbacks.OnAdOpened;
+import com.appnext.core.callbacks.OnAdClicked;
+import com.appnext.core.callbacks.OnAdClosed;
+import com.appnext.core.callbacks.OnAdError;
+import com.appnext.base.Appnext;
 import com.google.android.exoplayer2.DefaultLoadControl;
 import com.google.android.exoplayer2.ExoPlaybackException;
 import com.google.android.exoplayer2.ExoPlayerFactory;
@@ -65,12 +75,29 @@ import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory;
 import com.google.android.exoplayer2.upstream.FileDataSource;
 import com.google.android.exoplayer2.util.Util;
 
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import com.facebook.ads.*;
+
+import org.apache.http.Header;
+import org.apache.http.HttpResponse;
+import org.apache.http.HttpStatus;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.params.HttpClientParams;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.params.BasicHttpParams;
+import org.apache.http.params.HttpParams;
+import org.apache.http.protocol.BasicHttpContext;
+import org.apache.http.protocol.HttpContext;
 
 import in.tr.musicapp.R;
 import in.tr.musicapp.adapter.PlaylistItemAdapter;
@@ -94,6 +121,7 @@ public class HomeScreenActivity extends AppCompatActivity
     NavigationView navigationView;
     ActionBarDrawerToggle toggle;
     private RewardedVideoAd rewardedVideoAd;
+    private Interstitial interstitial_Ad;
     private FragmentManager.OnBackStackChangedListener
             mOnBackStackChangedListener = new FragmentManager.OnBackStackChangedListener() {
         @Override
@@ -106,6 +134,7 @@ public class HomeScreenActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
+        Appnext.init(this);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         assert getSupportActionBar() != null;
@@ -146,7 +175,58 @@ public class HomeScreenActivity extends AppCompatActivity
         getSupportFragmentManager().beginTransaction().replace(R.id.content, new SearchFragment()).commit();
         checkRunTimePermissions();
         rewardVideoAds();
+        rewardInterstitialAds(getString(R.string.InterstititalAdWelcomeScreenKey));
 
+    }
+
+    public void rewardInterstitialAds(String key) {
+        interstitial_Ad = new Interstitial(this, key);
+        // Get callback for ad loaded
+        interstitial_Ad.setOnAdLoadedCallback(new OnAdLoaded() {
+            @Override
+            public void adLoaded(String s) {
+
+            }
+        });
+        // Get callback for ad opened
+        interstitial_Ad.setOnAdOpenedCallback(new OnAdOpened() {
+            @Override
+            public void adOpened() {
+
+            }
+        });
+        // Get callback for ad clicked
+        interstitial_Ad.setOnAdClickedCallback(new OnAdClicked() {
+            @Override
+            public void adClicked() {
+
+            }
+        });
+        // Get callback for ad closed
+        interstitial_Ad.setOnAdClosedCallback(new OnAdClosed() {
+            @Override
+            public void onAdClosed() {
+
+            }
+        });
+        // Get callback for ad error
+        interstitial_Ad.setOnAdErrorCallback(new OnAdError() {
+            @Override
+            public void adError(String error) {
+                switch (error) {
+                    case AdsError.NO_ADS:
+                        Log.v("appnext", "no ads");
+                        break;
+                    case AdsError.CONNECTION_ERROR:
+                        Log.v("appnext", "connection problem");
+                        break;
+                    default:
+                        Log.v("appnext", "other error");
+                }
+            }
+        });
+        interstitial_Ad.loadAd();
+        interstitial_Ad.showAd();
     }
 
     public void rewardVideoAds() {
@@ -468,10 +548,7 @@ public class HomeScreenActivity extends AppCompatActivity
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DynamicConcatenatingMediaSource mediaSource = new DynamicConcatenatingMediaSource();
-                mediaSource.addMediaSource(getMediaSourceFromURL(url));
-                exoPlayer.prepare(mediaSource);
-                exoPlayer.setPlayWhenReady(true);
+                playMusic(url);
             }
         });
 
@@ -486,9 +563,17 @@ public class HomeScreenActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 showVideoAd();
+                rewardInterstitialAds(getString(R.string.InterstitialAdsDownloadButton));
                 DownloadFile.download(HomeScreenActivity.this, url, name);
             }
         });
+    }
+
+    private void playMusic(String url) {
+        DynamicConcatenatingMediaSource mediaSource = new DynamicConcatenatingMediaSource();
+        mediaSource.addMediaSource(getMediaSourceFromURL(url));
+        exoPlayer.prepare(mediaSource);
+        exoPlayer.setPlayWhenReady(true);
     }
 
     public void showVideoAd() {

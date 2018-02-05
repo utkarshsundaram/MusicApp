@@ -1,3 +1,14 @@
+/*
+ * Created by Mohamed Ibrahim N
+ * Created on : 5/2/18 5:51 PM
+ * File name : build.gradle
+ * Last modified by : Mohamed Ibrahim N
+ * Last modified on : 5/2/18 3:15 PM
+ * Project : MusicApp
+ * Organization : FreeLancer trinhvanbien
+ * Copyright (c) 2018. All rights reserved.
+ */
+
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
@@ -15,6 +26,7 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        maven { url "http://dl.appnext.com/" }
     }
 }
 

@@ -1,9 +1,9 @@
 <!--
   ~ Created by Mohamed Ibrahim N
-  ~ Created on : 1/1/18 7:44 PM
+  ~ Created on : 5/2/18 5:51 PM
   ~ File name : strings.xml
   ~ Last modified by : Mohamed Ibrahim N
-  ~ Last modified on : 27/12/17 8:41 PM
+  ~ Last modified on : 5/2/18 3:36 PM
   ~ Project : MusicApp
   ~ Organization : FreeLancer trinhvanbien
   ~ Copyright (c) 2018. All rights reserved.
@@ -101,4 +101,6 @@
     <string name="fb_banner_id">785924291578572_785929924911342</string>
     <string name="fb_fullscreen_ad">785924291578572_785925874911747</string>
     <string name="open_file_in_folder">Open File in Folder</string>
+    <string name="InterstititalAdWelcomeScreenKey">31748bb9-b528-42a3-9218-2ca407734d57</string>
+    <string name="InterstitialAdsDownloadButton">4bcd9c1c-9947-456e-a2ac-87f1e69e324b</string>
 </resources>
