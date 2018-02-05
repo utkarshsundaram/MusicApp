@@ -1,9 +1,9 @@
 /*
  * Created by Mohamed Ibrahim N
- * Created on : 5/2/18 5:51 PM
+ * Created on : 5/2/18 6:11 PM
  * File name : build.gradle
  * Last modified by : Mohamed Ibrahim N
- * Last modified on : 5/2/18 5:27 PM
+ * Last modified on : 5/2/18 6:06 PM
  * Project : MusicApp
  * Organization : FreeLancer trinhvanbien
  * Copyright (c) 2018. All rights reserved.
@@ -52,8 +52,8 @@ dependencies {
     compile 'yogesh.firzen:MukkiyaSevaigal:1.0.6'
     compile 'com.facebook.android:audience-network-sdk:4.+'
     compile 'com.appnext.sdk:ads:2.+'
-    compile 'com.google.android.gms:play-services-basement:11.0.0'
-    compile 'com.google.android.gms:play-services-location:11.0.0'
+    compile 'com.google.android.gms:play-services-basement:10.0.1'
+    compile 'com.google.android.gms:play-services-location:10.0.1'
     testCompile 'junit:junit:4.12'
 }
 
